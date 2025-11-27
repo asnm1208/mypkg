@@ -19,7 +19,7 @@ setup(
     maintainer='asnm1208',
     maintainer_email='otomo6475@gmail.com',
     description='a package for practice: Package description',
-    license='BSD-3-Clause: License declaration',
+    license='GPL-3.0 license',
     extras_require={
         'test': [
             'pytest',

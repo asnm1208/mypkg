@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>a package for practice: Package description</description>
   <maintainer email="otomo6475@gmail.com">asnm1208</maintainer>
-  <license>BSD-3-Clause: License declaration</license>
+  <license>GPL-3.0 license</license>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>launch_ros</exec_depend>
