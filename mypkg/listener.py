@@ -1,31 +1,36 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 asnm1208 <otomo6475@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-only
+
 import rclpy
 from rclpy.node import Node
-from person_msgs.srv import Query
+from std_msgs.msg import Float32
 
-rclpy.init()
-node = Node("listener")
 
-def main():
-    client = node.create_client(Query, 'query')
-    while not client.wait_for_service(timeout_sec=1.0):
-        node.get_logger().info('待機中')
+class CpuListener(Node):
+    def __init__(self):
+        super().__init__('cpu_listener')
+        # 'cpu_usage' トピックを購読
+        self.subscription = self.create_subscription(
+            Float32,
+            'cpu_usage',
+            self.listener_callback,
+            10)
 
-    req = Query.Request()
-    req.name = "浅沼陸斗"
-    future = client.call_async(req)
+    def listener_callback(self, msg):
+        # 80%を超えたら警告を出すなどの処理も可能
+        if msg.data > 80.0:
+            self.get_logger().warn(f'High CPU Load: {msg.data}%')
+        else:
+            self.get_logger().info(f'Received CPU Usage: {msg.data}%')
 
-    while rclpy.ok():
-        rclpy.spin_once(node)
-        if future.done():
-            try:
-                response = future.result()
-            except:
-                node.get_logger().info('呼び出し失敗')
-            else:
-                node.get_logger().info("age: {}".format(response.age))
-            break
 
+def main(args=None):
+    rclpy.init(args=args)
+    node = CpuListener()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
     node.destroy_node()
     rclpy.shutdown()
-
-
