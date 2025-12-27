@@ -3,3 +3,8 @@ install/
 log/
 __pycache__/
 *.egg-info/
+build/
+install/
+log/
+__pycache__/
+*.egg-info/
