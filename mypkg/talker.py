@@ -18,7 +18,7 @@ class CpuTalker(Node):
     def timer_callback(self):
         msg = Float32()
         # CPU使用率をパーセントで取得
-        msg.data = psutil.cpu_percentage()
+        msg.data = psutil.cpu_percent()
         self.publisher_.publish(msg)
         self.get_logger().info(f'Publishing CPU Usage: {msg.data}%')
 
