@@ -1,11 +1,11 @@
-#!/usr/bin/python3
 # SPDX-FileCopyrightText: 2025 asnm1208 <otomo6475@gmail.com>
 # SPDX-License-Identifier: GPL-3.0-only
 
-import pytest
 from launch import LaunchDescription
 from launch_ros.actions import Node
 import launch_testing
+import pytest
+
 
 @pytest.mark.rostest
 def generate_test_description():
@@ -19,7 +19,7 @@ def generate_test_description():
         launch_testing.actions.ReadyToTest(),
     ])
 
+
 def test_node_start(proc_info, proc_output):
     # ノードがエラーを出さずに起動したかをチェック
-    # (終了を待たずに起動を確認するだけのシンプルなテスト)
     pass
