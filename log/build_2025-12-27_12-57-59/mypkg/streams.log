@@ -1,0 +1,43 @@
+[1.784s] Invoking command in '/home/asnm1208/ros2_ws/src/mypkg': PYTHONPATH=/home/asnm1208/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build install --record /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/install.log --single-version-externally-managed install_data
+[2.369s] running egg_info
+[2.369s] creating build/mypkg/mypkg.egg-info
+[2.412s] writing build/mypkg/mypkg.egg-info/PKG-INFO
+[2.413s] writing dependency_links to build/mypkg/mypkg.egg-info/dependency_links.txt
+[2.413s] writing entry points to build/mypkg/mypkg.egg-info/entry_points.txt
+[2.414s] writing requirements to build/mypkg/mypkg.egg-info/requires.txt
+[2.414s] writing top-level names to build/mypkg/mypkg.egg-info/top_level.txt
+[2.415s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.504s] reading manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.505s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.505s] running build
+[2.508s] running build_py
+[2.508s] creating /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build
+[2.510s] creating /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib
+[2.511s] creating /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[2.512s] copying mypkg/__init__.py -> /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[2.513s] copying mypkg/talker.py -> /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[2.513s] copying mypkg/listener.py -> /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[2.514s] running install
+[2.526s] running install_lib
+[2.570s] creating /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.572s] copying /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/__init__.py -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.572s] copying /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/talker.py -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.573s] copying /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/listener.py -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.574s] byte-compiling /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg/__init__.py to __init__.cpython-312.pyc
+[2.575s] byte-compiling /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg/talker.py to talker.cpython-312.pyc
+[2.576s] byte-compiling /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg/listener.py to listener.cpython-312.pyc
+[2.578s] running install_data
+[2.578s] creating /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/ament_index
+[2.579s] creating /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index
+[2.580s] creating /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[2.582s] copying resource/mypkg -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[2.582s] copying package.xml -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+[2.583s] creating /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/mypkg/launch
+[2.584s] copying launch/talk_listen.launch.py -> /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/share/mypkg/launch
+[2.585s] running install_egg_info
+[2.629s] Copying build/mypkg/mypkg.egg-info to /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages/mypkg-0.0.0-py3.12.egg-info
+[2.633s] running install_scripts
+[2.932s] Installing listener script to /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[2.934s] Installing talker script to /home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[2.935s] writing list of installed files to '/home/asnm1208/ros2_ws/src/mypkg/build/mypkg/install.log'
+[2.990s] Invoked command in '/home/asnm1208/ros2_ws/src/mypkg' returned '0': PYTHONPATH=/home/asnm1208/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asnm1208/ros2_ws/src/mypkg/install/mypkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/build install --record /home/asnm1208/ros2_ws/src/mypkg/build/mypkg/install.log --single-version-externally-managed install_data
