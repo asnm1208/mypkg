@@ -1,8 +1,0 @@
-Metadata-Version: 2.1
-Name: mypkg
-Version: 0.0.0
-Summary: a package for practice: Package description
-Maintainer: asnm1208
-Maintainer-email: otomo6475@gmail.com
-License: GPL-3.0 license
-Provides-Extra: test
