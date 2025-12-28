@@ -49,7 +49,10 @@ GitHub Actionsを利用し、プッシュごとに以下の環境で自動テス
   - `ament_copyright`: 著作権およびライセンス情報の有無
   - `ament_flake8`: PEP 8に基づいたコードスタイルの遵守
   - `ament_pep257`: Python docstringの記述形式
-  - `launch_testing`: ノードの正常起動およびトピックの生存確認
+  - `launch_testing (Integration Test)`:
+    - ノードの正常起動確認
+    - **トピック疎通確認**: 実際にノード間でメッセージが送受信されているかを検証
+    - **データバリデーション**: 取得したCPU使用率が 0.0% 〜 100.0% の範囲内に収まっているか、値の妥当性を厳格にチェック
 
 ## 著作権・ライセンス
 - このソフトウェアパッケージは、GNU General Public License v3.0 (GPL-3.0-only) の下、再頒布および使用が許可されています。
