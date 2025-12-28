@@ -5,9 +5,9 @@
 
 ## 概要
 ROS 2を用いて、PCのCPU使用率をパブリッシュし、別ノードで購読・表示するパッケージです。  
+![test](https://github.com/asnm1208/mypkg/actions/workflows/test.yml/badge.svg)  
 - **talkerノード**: `psutil`ライブラリを使用してCPU使用率を取得し、`/cpu_usage`トピックへパブリッシュします。  
 - **listenerノード**: `/cpu_usage`トピックをサブスクライブし、標準出力に表示します。  
-![test](https://github.com/asnm1208/mypkg/actions/workflows/test.yml/badge.svg)  
 
 ## 推奨環境
 - OS: Ubuntu 24.04 LTS
@@ -20,12 +20,12 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 
 2. 個別に起動する場合  
-- Talker (送信側)
+Talker (送信側)
 ```bash
 $ ros2 run mypkg talker
 ```
 
-- Listener (受信側)
+Listener (受信側)
 ```bash
 $ ros2 run mypkg listener
 ```
