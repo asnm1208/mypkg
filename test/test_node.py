@@ -31,7 +31,7 @@ def test_topic_data_received():
     received_msgs = []
 
     # /cpu_usage トピックを購読
-    sub = node.create_subscription(
+    node.create_subscription(
         Float32,
         '/cpu_usage',
         lambda msg: received_msgs.append(msg),
@@ -45,11 +45,11 @@ def test_topic_data_received():
             rclpy.spin_once(node, timeout_sec=0.1)
 
         # 【テスト項目1】データが1つ以上届いたか
-        assert len(received_msgs) > 0, "トピック /cpu_usage からデータを受信できませんでした"
+        assert len(received_msgs) > 0, 'トピック /cpu_usage からデータを受信できませんでした'
 
         # 【テスト項目2】届いたデータが0.0〜100.0の範囲内か
         for msg in received_msgs:
-            assert 0.0 <= msg.data <= 100.0, f"異常なCPU使用率を検出しました: {msg.data}"
+            assert 0.0 <= msg.data <= 100.0, f'異常なCPU使用率を検出しました: {msg.data}'
 
     finally:
         node.destroy_node()
