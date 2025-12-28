@@ -24,7 +24,6 @@ Talker (送信側)
 ```bash
 $ ros2 run mypkg talker
 ```
-
 Listener (受信側)
 ```bash
 $ ros2 run mypkg listener
