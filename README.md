@@ -27,7 +27,6 @@ $ ros2 launch mypkg talk_listen.launch.py
  [listener-2] [INFO] [1767580404.951177775] [cpu_listener]: Received CPU Usage: 5.0%
  [talker-1] [INFO] [1767580405.903514188] [cpu_talker]: Publishing CPU Usage: 0.5%
  [listener-2] [INFO] [1767580405.904432249] [cpu_listener]: Received CPU Usage: 0.5%
- [talker-1] [INFO] [1767580406.903105790] [cpu_talker]: Publishing CPU Usage: 0.1%
 ```
 
 2. 個別に起動する場合  
@@ -46,7 +45,7 @@ $ ros2 run mypkg listener
 - 更新頻度: 1.0 Hz
 
 ## テスト環境
-テストの実施環境や詳細な検証内容については、こちらのテスト報告書を参照してください。
+テストの実施環境や詳細な検証内容については、[こちらのテスト報告書](https://github.com/asnm1208/mypkg/blob/main/docs/TESTING.md)を参照してください。
 
 ## 著作権・ライセンス
 - このソフトウェアパッケージは、GNU General Public License v3.0 (GPL-3.0-only) の下、再頒布および使用が許可されています。
