@@ -20,7 +20,7 @@ ROS 2を用いて、PCのCPU使用率をパブリッシュし、別ノードで�
 ```bash
 $ ros2 launch mypkg talk_listen.launch.py
 ```
-実行例
+出力例
 ```
 $ ros2 launch mypkg talk_listen.launch.py
  [talker-1] [INFO] [1767580404.951161764] [cpu_talker]: Publishing CPU Usage: 5.0%
