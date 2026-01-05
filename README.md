@@ -12,11 +12,22 @@ ROS 2を用いて、PCのCPU使用率をパブリッシュし、別ノードで�
 ## 推奨環境
 - OS: Ubuntu 24.04 LTS
 - ROS 2 バージョン: Jazzy Jalisco
+- Python 3.12
+- Pythonライブラリ: python3-psutil
 
 ## 使い方
 1. TalkerとListenerを同時に起動（Launchファイル）  
 ```bash
 $ ros2 launch mypkg talk_listen.launch.py
+```
+実行例
+```
+$ ros2 launch mypkg talk_listen.launch.py
+ [talker-1] [INFO] [1767580404.951161764] [cpu_talker]: Publishing CPU Usage: 5.0%
+ [listener-2] [INFO] [1767580404.951177775] [cpu_listener]: Received CPU Usage: 5.0%
+ [talker-1] [INFO] [1767580405.903514188] [cpu_talker]: Publishing CPU Usage: 0.5%
+ [listener-2] [INFO] [1767580405.904432249] [cpu_listener]: Received CPU Usage: 0.5%
+ [talker-1] [INFO] [1767580406.903105790] [cpu_talker]: Publishing CPU Usage: 0.1%
 ```
 
 2. 個別に起動する場合  
@@ -35,24 +46,7 @@ $ ros2 run mypkg listener
 - 更新頻度: 1.0 Hz
 
 ## テスト環境
-### 1. ローカル環境
-- OS: Ubuntu 24.04.3 LTS
-- ROS 2: Jazzy Jalisco
-- Python: 3.12.x
-- 依存確認済みライブラリ: `python3-psutil`
-
-### 2. CI環境 (GitHub Actions)
-GitHub Actionsを利用し、プッシュごとに以下の環境で自動テスト（Lintおよび起動テスト）を実施しています。
-- ベース環境: Ubuntu 24.04 (runs-on: ubuntu-24.04)
-- ROS 2 コンテナ: `ros:jazzy-ros-base`
-- 確認項目:
-  - `ament_copyright`: 著作権およびライセンス情報の有無
-  - `ament_flake8`: PEP 8に基づいたコードスタイルの遵守
-  - `ament_pep257`: Python docstringの記述形式
-  - `launch_testing (Integration Test)`:
-    - ノードの正常起動確認
-    - トピック疎通確認：実際にノード間でメッセージが送受信されているか
-    - データバリデーション: 取得したCPU使用率が 0.0% 〜 100.0% の範囲内に収まっているか
+テストの実施環境や詳細な検証内容については、こちらのテスト報告書を参照してください。
 
 ## 著作権・ライセンス
 - このソフトウェアパッケージは、GNU General Public License v3.0 (GPL-3.0-only) の下、再頒布および使用が許可されています。
